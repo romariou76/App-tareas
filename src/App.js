@@ -1,12 +1,15 @@
 import React from 'react';
-import './App.css';
+import Drawer from "./components/Drawer.jsx";
+import './index.css'
+
+// import Main from "./components/header.jsx"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       
-      </header>
+     
+        {/* <Main></Main> */}
+        <Drawer></Drawer>
     </div>
   );
 }
