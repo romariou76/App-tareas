@@ -28,8 +28,7 @@ function Drawer(){
                <p class="mb-5">
                   Esta sera la pagina donde ingresaremos el contenido de la lista de tareas, iconos
                   tareas pendientes, listas etc pe
-               </p> 
-               <button class="btn btn-primary">botoncito</button>
+               </p>
             </div>
          </div>
       </div>
