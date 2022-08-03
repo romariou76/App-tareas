@@ -1,9 +1,19 @@
-import "../css/style.css";
+import '../css/style.css'
+import React from 'react';
 
 function Main(){
+
+
+
+
+
+
+
+
+
+
     return(
 
-      
 <div class="container">
     <div class="perfil">
       <div id="fecha"></div>
@@ -13,7 +23,7 @@ function Main(){
 
     <div class="agregar-tarea">
         <input type="text" id="input" placeholder="agregar una tarea"/>
-        <i id="boton-enter"class="fas fa-plus-circle"></i>
+        <i id="boton-enter" class="fas fa-plus-circle"></i>
     </div>
     
     <div class="seccion-tarea">
