@@ -1,3 +1,4 @@
+import Main from './header.jsx';
 
 function Drawer(){
     return(
@@ -19,19 +20,8 @@ function Drawer(){
       </div>
       
       {/* Contenido principal pc-mobile */}
-      <div className="hero min-h-screen">
-         <div class="text-center hero-content">
-            <div class="max-w-md">
-               <h1 class="mb-5 text-5xl font-bold">
-                  Hola Compade
-               </h1> 
-               <p class="mb-5">
-                  Esta sera la pagina donde ingresaremos el contenido de la lista de tareas, iconos
-                  tareas pendientes, listas etc pe
-               </p>
-            </div>
-         </div>
-      </div>
+      <Main/>
+
          
 
    </div> 
