@@ -8,9 +8,9 @@ import './index.css'
 function App() {
   return (
 <div class="">
-  {/* <Drawer></Drawer> */}
+  <Drawer></Drawer>
   {/* <Main/> */}
-  <Page/>
+  {/* <Page/> */}
 </div>
   );
 }
