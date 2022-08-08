@@ -1,9 +1,8 @@
-import Main from './header.jsx';
 import Page from './main.jsx';
+import App2 from '../components/App.js';
 
 function Drawer(){
     return(
-
 
 <div class="drawer drawer-mobile shadow">
    {/* boton */}
@@ -12,13 +11,10 @@ function Drawer(){
   <div class="drawer-content">
 
       {/* boton que abre el sidebar cuando esta en mobile */}
-      
-      
       {/* Contenido principal pc-mobile */}
       {/* <Main/> */}
-      <Page/>
-
-         
+      {/* <Page/> */}
+  <App2 />
 
    </div> 
   
