@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar"
 import ControlVisibilidad from "./components/ControlVisibilidad";
 import CreadorTareas from "./components/CreadorTareas";
 import TablaTarea from "./components/TablaTarea";
@@ -63,8 +64,46 @@ function App2() {
   }, [tareaItems]); // Le pasamos el dato variable que va cambiando en este caso la lista(tareaItems), si cambia vuelve a ejecutar lo que esta dentro de la funcion
   // Por lo tanto aqui seria el lugar correcto para guardarlo en el localStorage
   return (
-    <div className="App">
-      <CreadorTareas crearTarea={crearTarea} />
+
+<div className="h-screen">
+    <Navbar />
+
+  <div className="flex justify-center h-auto bg-base-100">
+    <div className="text-center">
+      {/* Contenedor de las Areas */}
+      <div className="flex flex-col w-96">
+
+        {/* Area de categorias, nombre */}
+        <div className="h-auto bg-base-100 mb-5">
+          <div className="grid justify-items-start">
+            <h1 className="text-4xl font-bold mb-10 ml-2">¡Qué tal, Romario¡</h1>
+            <p className="ml-4 mb-5 text-lg font-bold">Categorias</p>
+          </div>
+
+          {/* Botones de Tareas pendientes o resueltas */}
+          <div className="flex justify-between ml-7 mr-7">
+            <div>
+              <div class="border-b-4 border-green ...">
+                <p className="text-sm font-bold opacity-75 mr-7">40 tareas</p>
+                <p className="text-lg font-bold">Pendientes</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="border-b-4 border-red ...">
+                <p className="text-sm font-bold opacity-75 mr-7">10 tareas</p>
+                <p className="text-lg font-bold">Concluidas</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      <div className="">
+        <CreadorTareas crearTarea={crearTarea} />
+      </div>
+ 
       <TablaTarea
         tareas={tareaItems}
         actualizarTarea={actualizarTarea}
@@ -102,7 +141,10 @@ function App2() {
           />
         )
       }
+      </div>
     </div>
+  </div>
+</div>
   );
 }
 

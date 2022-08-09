@@ -5,13 +5,16 @@ function FilaTarea({ tarea, actualizarTarea }) {
   return (
     <tr key={tarea.name}>
       <td>
-        <input
-          type="checkbox"
-          checked={tarea.done} //chekea si es false o true
-          onChange={() => actualizarTarea(tarea)} // Si da click cambia el valor de tarea.done(leer arreglo, buscarlo y actualizarlo)
-          // Ademas le pasamos a la funcion la tarea que estamos intentando cambiar el estado true o false
-        />
-        {tarea.name}
+        <div className="flex gap-5 mb-8 ml-5">
+          <input
+            type="checkbox"
+            className="checkbox checkbox-primary"
+            checked={tarea.done} //chekea si es false o true
+            onChange={() => actualizarTarea(tarea)} // Si da click cambia el valor de tarea.done(leer arreglo, buscarlo y actualizarlo)
+            // Ademas le pasamos a la funcion la tarea que estamos intentando cambiar el estado true o false
+          />
+          <p>{tarea.name}</p>
+        </div>
       </td>
     </tr>
   );
