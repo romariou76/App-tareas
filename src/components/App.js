@@ -1,4 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from "react";
+
 import Navbar from "./components/Navbar"
 import ControlVisibilidad from "./components/ControlVisibilidad";
 import CreadorTareas from "./components/CreadorTareas";
@@ -7,17 +9,12 @@ import Categorias from "./components/Categorias"
 
 function App2() {
   const [tareaItems, setTareaItems] = useState([]);
-  /* Datos de ejemplo dentro de useState
-  { name: "tarea 1", done: false },
-  { name: "tarea 2", done: false },
-  { name: "tarea 3", done: false }, */
 
   // Pasaremos esta funcion al componente CreadorTareas(linea19) mediante props para que lo ejecute
   function crearTarea(tareaName) {
-    // alert('creando...')// alert(tareaName)
-    // Si devuelve undefined pues ese dato no existe entonces si puedes añadir esa tarea, mas si existe no hace nada :V - Compara si hay un objeto si existe o no
     if (!tareaItems.find((tarea) => tarea.name === tareaName)) {
-      setTareaItems([...tareaItems, { name: tareaName, done: false }]); // React dice crear una copia del arreglo (...tareas) y añade el nuevo elemento como un "Objeto"
+      const tareasActualizadas = [...tareaItems, { id: uuidv4, name: tareaName, done: false }]; // React dice crear una copia del arreglo (...tareas) y añade el nuevo elemento como un "Objeto"
+      setTareaItems(tareasActualizadas)
     } else {
       alert("tarea ya agregada");
     }
@@ -48,12 +45,13 @@ function App2() {
   }, []); //importante este parametro array para evitar millones de errores xd
 
   // Creamos esta funcion para eliminar las tareas que ya fueron hechas para ello usaremos un filtro
-  const limpiartareas = () => {
+  const limpiartareas = (id) => {
     // De todas las tareas del arreglo filtramos, por cada una de las tareas  buscamos las que su prop done esten true, y retornamos las que no estan hechas con el signo contrario "!"
     // Por lo tanto las que si estan hechas desapareceran al actualizar setTareaItems
-    setTareaItems(tareaItems.filter(tarea => !tarea.done))
-    // Una vez que lo haya limpiado marcamos como false el input de mostrarTareaCompletadas
+    setTareaItems(tareaItems.filter(tarea => tarea.id !== id))
   }
+
+
 
   // El hook useEffect se ejecuta cada vez si un dato cambia
   useEffect(() => {
@@ -116,7 +114,6 @@ function App2() {
                   mostrarTareaCompletadas={true}
                   name="Tareas realizadas"
                   iditem="item2"
-                  eliminar="eliminar"
                 />
               </div>
             </div>
