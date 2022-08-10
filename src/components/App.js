@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import ControlVisibilidad from "./components/ControlVisibilidad";
 import CreadorTareas from "./components/CreadorTareas";
 import TablaTarea from "./components/TablaTarea";
+import Categorias from "./components/Categorias"
 
 function App2() {
   const [tareaItems, setTareaItems] = useState([]);
@@ -10,8 +11,6 @@ function App2() {
   { name: "tarea 1", done: false },
   { name: "tarea 2", done: false },
   { name: "tarea 3", done: false }, */
-
-  const [mostrarTareaCompletadas, setMostrarTareaCompletadas] = useState(false);
 
   // Pasaremos esta funcion al componente CreadorTareas(linea19) mediante props para que lo ejecute
   function crearTarea(tareaName) {
@@ -54,7 +53,6 @@ function App2() {
     // Por lo tanto las que si estan hechas desapareceran al actualizar setTareaItems
     setTareaItems(tareaItems.filter(tarea => !tarea.done))
     // Una vez que lo haya limpiado marcamos como false el input de mostrarTareaCompletadas
-    setMostrarTareaCompletadas(false)
   }
 
   // El hook useEffect se ejecuta cada vez si un dato cambia
@@ -64,87 +62,74 @@ function App2() {
   }, [tareaItems]); // Le pasamos el dato variable que va cambiando en este caso la lista(tareaItems), si cambia vuelve a ejecutar lo que esta dentro de la funcion
   // Por lo tanto aqui seria el lugar correcto para guardarlo en el localStorage
   return (
+    <div className="h-screen">
+      <Navbar />
+      <div className="flex justify-center h-auto bg-base-100">
+        <div className="text-center">
+          {/* Contenedor de las Areas */}
+          <div className="flex flex-col w-96">
+            {/* Area de categorias, nombre */}
+            <div className="h-auto bg-base-100 mb-5">
+              <div className="grid justify-items-start">
+                <h1 className="text-4xl font-bold mb-10 ml-2">
+                  ¡Qué tal, Romario¡
+                </h1>
+                <p className="ml-4 mb-5 text-lg font-bold">Categorias</p>
+              </div>
+              {/* Area de Categorias */}
+              <div className="flex justify-between ml-7 mr-7">
+                <Categorias
+                  name="Pendientes"
+                  cantidad={40}
+                  href="#item1"
+                  className="border-b-4 border-green"
+                />
 
-<div className="h-screen">
-    <Navbar />
-
-  <div className="flex justify-center h-auto bg-base-100">
-    <div className="text-center">
-      {/* Contenedor de las Areas */}
-      <div className="flex flex-col w-96">
-
-        {/* Area de categorias, nombre */}
-        <div className="h-auto bg-base-100 mb-5">
-          <div className="grid justify-items-start">
-            <h1 className="text-4xl font-bold mb-10 ml-2">¡Qué tal, Romario¡</h1>
-            <p className="ml-4 mb-5 text-lg font-bold">Categorias</p>
-          </div>
-
-          {/* Botones de Tareas pendientes o resueltas */}
-          <div className="flex justify-between ml-7 mr-7">
-            <div>
-              <div class="border-b-4 border-green ...">
-                <p className="text-sm font-bold opacity-75 mr-7">40 tareas</p>
-                <p className="text-lg font-bold">Pendientes</p>
+                <Categorias
+                  name="Completadas"
+                  cantidad={10}
+                  href="#item2"
+                  className="border-b-4 border-red"
+                />
               </div>
             </div>
 
-            <div>
-              <div class="border-b-4 border-red ...">
-                <p className="text-sm font-bold opacity-75 mr-7">10 tareas</p>
-                <p className="text-lg font-bold">Concluidas</p>
+            <div className="">
+              <CreadorTareas crearTarea={crearTarea} />
+            </div>
+            
+            {/* Carrousel de las tablas */}
+            <div className="flex h-auto w-96 bg-base-100">
+              <div className="carousel">
+                <TablaTarea
+                  tareas={tareaItems}
+                  actualizarTarea={actualizarTarea}
+                  mostrarTareaCompletadas={false}
+                  name="Tareas de hoy"
+                  iditem="item1"
+                />
+
+                {/* Vamos a usar la misma tabla para filtrar las tareas a partir de la propiedad done:false true */}
+                <TablaTarea
+                  tareas={tareaItems}
+                  actualizarTarea={actualizarTarea}
+                  mostrarTareaCompletadas={true}
+                  name="Tareas realizadas"
+                  iditem="item2"
+                  eliminar="eliminar"
+                />
               </div>
             </div>
-          </div>
 
+            {/* Creamos esete boton para mostrar las tareas realizadas, recibe un evento para cambiar un estado a su valor boleano contrario, y la variable mostrarTareaCompletadas a true o false para mostrar o ocultar la tabla de tareas realizadas */}
+            {/* Y le pasamos la funcion como prop que requiere el componente */}
+            <ControlVisibilidad
+              limpiartareas={limpiartareas} // le pasamos la prop y su valor
+            />
+          </div>
         </div>
-
-
-      <div className="">
-        <CreadorTareas crearTarea={crearTarea} />
-      </div>
- 
-      <TablaTarea
-        tareas={tareaItems}
-        actualizarTarea={actualizarTarea}
-        mostrarTareaCompletadas={false}
-        name='Tareas de hoy'
-      />
-
-      {/* Creamos esete boton para mostrar las tareas realizadas, recibe un evento para cambiar un estado a su valor boleano contrario, y la variable mostrarTareaCompletadas a true o false para mostrar o ocultar la tabla de tareas realizadas */}
-      {/* Y le pasamos la funcion como prop que requiere el componente */}
-      <ControlVisibilidad
-        isChecked={mostrarTareaCompletadas} // Esta basado en el mostrarTareaCompletadas, si esta true o false para que el input se vea vacio
-        // Ejecutaremos una funcion que recibira un parametro checked y lo que hara es establecerlo como el valor del setMostrarTareasCompletadas
-        // De esta forma ya no necesitamos pasarle el valor mostrarTareaCompletadas
-        setMostrarTareaCompletadas = {(checked) => setMostrarTareaCompletadas(checked)}
-        limpiartareas={limpiartareas} // le pasamos la prop y su valor
-      />
-
-      {/* <div>
-        <input
-          type="checkbox"
-          onChange={(e) => setMostrarTareaCompletadas(!mostrarTareaCompletadas)}
-        />
-        <label>Mostrar tareas hechas</label>
-      </div> */}
-
-      {/* Vamos a usar la misma tabla para filtrar las tareas a partir de la propiedad done:false true */}
-      {
-        //Si mostrarTareasCompletadas es true - linea 81, entonces mostrara el componente TablaTarea
-        mostrarTareaCompletadas === true && (
-          <TablaTarea
-            tareas={tareaItems}
-            actualizarTarea={actualizarTarea}
-            mostrarTareaCompletadas={mostrarTareaCompletadas}
-            name='Tareas realizadas'
-          />
-        )
-      }
       </div>
     </div>
-  </div>
-</div>
   );
 }
 

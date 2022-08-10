@@ -1,7 +1,7 @@
 import FilaTarea from "./FilaTarea";
 
 // Recibimos como prop {tareas} de app.js las cuales seran el arreglo de tareas que luego mapearemos
-function TablaTarea({tareas, actualizarTarea, mostrarTareaCompletadas, name }){
+function TablaTarea({tareas, actualizarTarea, mostrarTareaCompletadas, name, iditem, eliminar}){
 
   const TareasFila = (donevalue) => {
     // console.log(donevalue)
@@ -19,31 +19,20 @@ function TablaTarea({tareas, actualizarTarea, mostrarTareaCompletadas, name }){
     ); 
   };
 
-    return(
-      <div className="h-auto w-96 bg-base-100 mt-5">
-        <table>
-          <thead>
-            <tr>
-              <div className="ml-0 mt-5 mb-8">
-                <th>
-                  <p className="text-lg ml-2">
-                  {name}
-                  </p></th>
-              </div>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Separamos esta logica en otra funcion aparte que se llamara TareasFila la cual la llamamos aqui*/}
-            {/* basado en una propiedad vamos a cambiar los valores */}
-            {/* mostrarTareaCompletadas es un prop booleano el cual luego recibimos el valor booleano en la funcion TareasFila */}
-            {
-              TareasFila(mostrarTareaCompletadas)
-            }
-          </tbody>
-        </table>
+    return (
+      <div id={iditem} className="carousel-item w-full">
+        <div>
+          <div className="flex justify-items-start mt-5 mb-8">
+            <p className="text-lg font-bold ml-4">{name}</p>
+            <p className="text-lg font-bold ml-2">{eliminar}</p>
+          </div>
+          {/* Separamos esta logica en otra funcion aparte que se llamara TareasFila la cual la llamamos aqui*/}
+          {/* basado en una propiedad vamos a cambiar los valores */}
+          {/* mostrarTareaCompletadas es un prop booleano el cual luego recibimos el valor booleano en la funcion TareasFila */}
+          {TareasFila(mostrarTareaCompletadas)}
+        </div>
       </div>
-
-    )
+    );
 }
 
 export default TablaTarea;
