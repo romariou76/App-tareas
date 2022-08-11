@@ -1,15 +1,11 @@
-import React from "react";
-import Drawer from "./components/Drawer.jsx";
-// import Page from './components/main.jsx';
-import "./index.css";
+import './App.css';
+import Drawer from './components/Drawer';
 
 function App() {
   return (
-    <div className="">
-      <Drawer></Drawer>
-      {/* <Main/> */}
-      {/* <Page/> */}
-    </div>
+<>
+    <Drawer />
+</>
   );
 }
 

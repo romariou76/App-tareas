@@ -1,5 +1,4 @@
-// import Page from './main.jsx';
-import App2 from '../components/App.js';
+import Contenido from "./Contenido";
 
 function Drawer(){
     return(
@@ -8,15 +7,9 @@ function Drawer(){
    {/* boton */}
    <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
 
-  <div className="drawer-content">
-
-      {/* boton que abre el sidebar cuando esta en mobile */}
-      {/* Contenido principal pc-mobile */}
-      {/* <Main/> */}
-      {/* <Page/> */}
-  <App2 />
-
-   </div> 
+    <div className="drawer-content">
+        <Contenido />
+    </div> 
   
   {/* Contenedor del drawer-side */}
    <div className="drawer-side overflow-y-auto">
