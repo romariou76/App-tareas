@@ -1,0 +1,19 @@
+.tarea-contenedor.completada {
+    text-decoration: line-through;
+  }
+
+.tarea-contenedor{
+    display: flex;
+    width: 24rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    }
+.tarea-icono{
+    width: 25px;
+    height: 25px;
+}
+
+.checkbox{
+    border-radius: 50px;
+    border: 2px solid rgb(109 40 217);
+}

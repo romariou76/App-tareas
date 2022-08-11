@@ -22,14 +22,14 @@ function Contenido() {
                   name="Personales"
                   cantidad={5}
                   href="#item1"
-                  className="border-b-4 border-green"
+                  className="grid justify-items-start border-b-4 border-green"
                 />
 
                 <Categorias
-                  name="Trabajo"
+                  name="Trabajos"
                   cantidad={5}
                   href="#item2"
-                  className="border-b-4 border-red"
+                  className="grid justify-items-start border-b-4 border-red"
                 />
               </div>
             </div>
