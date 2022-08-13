@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Tarea.css";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { MdDelete } from "react-icons/md";
 
 function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
   return (
@@ -17,7 +17,7 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
       </div>
       <div className="flex justify-end mr-9">
         <button onClick={() => eliminarTarea(id)}>
-          <AiOutlineCloseCircle className="tarea-icono" />
+          <MdDelete className="tarea-icono" />
         </button>
       </div>
     </div>
