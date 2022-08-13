@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 h-24">
+    <div className="navbar bg-white h-24">
       <div className="navbar-start">
         {/* Boton que desplega el drawer */}
         <label

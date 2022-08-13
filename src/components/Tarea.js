@@ -8,10 +8,12 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
       <div className="flex justify-start gap-5 ml-7">
         <input
           type="checkbox"
+          checked={completada} // le pasamos el valor boleano de completada
           onClick={() => completarTarea(id)}
           className="checkbox checkbox-primary"
         />
-        <p className="">{texto}</p>
+
+        <p className="text-black3 font-bold">{texto}</p>
       </div>
       <div className="flex justify-end mr-9">
         <button onClick={() => eliminarTarea(id)}>

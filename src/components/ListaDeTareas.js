@@ -49,7 +49,7 @@ function ListaDeTareas() {
       <TareaFormulario onSubmit={agregarTarea} />
       <div className="w-96">
         <div className="flex justify-items-start mt-5 mb-8">
-          <p className="text-lg font-bold ml-4">Tareas pendientes</p>
+          <p className="text-lg text-black2 font-bold ml-4">Tareas pendientes</p>
         </div>
         {tareas.map((tarea) => (
           <Tarea

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import '../css/TareaFormulario.css'
+import { IoAddCircle } from "react-icons/io5";
 import { v4 as uuidv4 } from "uuid";
 
 function TareaFormulario(props) {
@@ -19,15 +21,20 @@ function TareaFormulario(props) {
 
   return (
     <form onSubmit={manejarEnvio}>
-      <div className="flex w-96 ml-2">
+      <div className="flex w-96 ml-4">
         <input
-          className="input w-full max-w-xs"
           type="text"
-          placeholder="Escribe una Tarea"
-          name="texto"
-          onChange={(e) => {setInput(e.target.value)}}
+          class="search__input"
+          placeholder="Ingrese una tarea"
+          minlength="4"
+          maxlength="33"
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
         />
-        <button className="btn btn-primary mr-8">Agregar</button>
+        <button class="search__button">
+          <IoAddCircle className="w-10 h-10 text-primary" />
+        </button>
       </div>
     </form>
   );

@@ -18,6 +18,8 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'black': '#000000',
+      'black2': 'rgba(105, 104, 104, 0.788)',
+      'black3': 'rgba(0, 0, 0, 0.767)',
       'yellow': '#e5ff00',
       'green': '#7bff00',
       'red': '#ff00009c',

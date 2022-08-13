@@ -5,10 +5,10 @@ function Categorias({ name, cantidad, href, className }) {
       <a href={href}>
         <button>
           <div className={className}>
-            <p className="text-sm font-bold opacity-75 mr-7">
+            <p className="text-sm text-black2  font-bold opacity-75 mr-7">
               {cantidad} Tareas
             </p>
-            <p className="text-lg font-bold">{name}</p>
+            <p className="text-lg text-black font-bold">{name}</p>
           </div>
         </button>
       </a>
