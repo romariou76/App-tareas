@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "../css/style.css"
+
 function Bienvenida(){
     return(
         <div className="h-screen flex justify-center bienvenida">
@@ -33,7 +35,7 @@ function Bienvenida(){
                     <div className="pl-8">
                         {/* <p className="text-center mr-8 mb-4">Ingrese su nombre para empezar</p> */}
                         {/* <input type="text" placeholder="Ingrese su nombre" class="input w-full max-w-xs mb-4" /> */}
-                        <button class="btn btn-primary w-80">¡Empezar!</button>
+                        <Link to="/drawer" class="btn btn-primary w-80">¡Empezar!</Link>
                     </div>
                 </div>
             </div>
