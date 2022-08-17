@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import "./App.css";
 import Bienvenida from "./components/Bienvenida";
-import Contenido from "./components/Contenido";
 import Drawer from "./components/Drawer";
 
 function App() {
@@ -9,7 +8,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Bienvenida />} />
-        <Route path="/drawer" element={<Drawer />} />
+        <Route path="/app" element={<Drawer />} />
+        
+        {/* <Route path="/bienvenida" render={() => {
+          return user ? <Navigate to='/' />: <Bienvenida />
+        }}
+        /> */}
       </Routes>
     </>
   );
