@@ -4,14 +4,14 @@ import Navbar from "./Navbar";
 
 function Contenido() {
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen bg-white">
       <Navbar />
-      <div className="flex justify-center h-auto bg-black">
+      <div className="flex justify-center h-auto bg-white">
         <div className="text-center">
           <div className="flex flex-col w-96">
-            <div className="h-auto bg-black mb-5">
+            <div className="h-auto bg-white mb-5">
               <div className="grid justify-items-start">
-                <h1 className="text-white text-4xl font-bold mb-6 ml-4">
+                <h1 className="text-black text-4xl font-bold mb-6 ml-4">
                   Bienvenido
                 </h1>
                 {/* <p className="ml-4 mb-5 text-lg text-black2 font-bold">Categorias</p> */}
@@ -35,10 +35,10 @@ function Contenido() {
             </div>
 
             <div className="grid justify-items-start">
-                <p className="ml-4 mb-5 text-lg text-white2 font-bold">Agregar tarea</p>
+                <p className="ml-4 mb-5 text-lg text-black2 font-bold">Agregar tarea</p>
             </div>
 
-            <div className="h-auto w-96 bg-black">
+            <div className="h-auto w-96 bg-white">
               <ListaDeTareas />
             </div>
           </div>

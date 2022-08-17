@@ -13,7 +13,7 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
           className="checkbox checkbox-primary"
         />
 
-        <p className="text-white font-bold">{texto}</p>
+        <p className="text-black3 font-bold">{texto}</p>
       </div>
       <div className="flex justify-end mr-9">
         <button onClick={() => eliminarTarea(id)}>

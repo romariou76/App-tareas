@@ -20,7 +20,7 @@ function TareaFormulario(props) {
   };
 
   return (
-    <form onSubmit={manejarEnvio} className="bg-black">
+    <form onSubmit={manejarEnvio}>
       <div className="flex w-96 ml-4">
         <input
           type="text"

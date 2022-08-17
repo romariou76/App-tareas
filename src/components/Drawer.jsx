@@ -22,7 +22,7 @@ function Drawer(){
    {/* Contenedor que se abre */}
       <label htmlFor="my-drawer" className="drawer-overlay"></label>
          {/* Lista ul que es caja de los elementos */}
-         <ul className="menu p-12 overflow-y-auto w-80 bg-dark text-base-content space-y-2">
+         <ul className="menu p-12 overflow-y-auto w-80 bg-purple text-base-content space-y-2">
             {/* Imagen avatar */}
             <div className="avatar my-10 ml-0">
                <div className="w-32 rounded-full">
@@ -31,8 +31,8 @@ function Drawer(){
             </div>
 
             <div className="my-8 ml-2">
-               <p className="text-3xl text-yellow font-bold">Rom</p>
-              <p className="text-3xl text-icono font-bold mb-4">To Do</p>
+               <p className="text-3xl text-white font-bold">Rom</p>
+              <p className="text-3xl text-white font-bold mb-4">To Do</p>
             </div>
             {/* boton close */}
             <div className="flex items-start justify-end lg:hidden bg-transparent">
