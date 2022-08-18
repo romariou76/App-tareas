@@ -24,9 +24,9 @@ function Drawer(){
          {/* Lista ul que es caja de los elementos */}
          <ul className="menu p-12 overflow-y-auto w-80 bg-dark text-base-content space-y-2">
             {/* Imagen avatar */}
-            <div className="avatar my-10 ml-0">
+            <div className="avatar my-7 ml-0">
                <div className="w-32 rounded-full">
-                  <img src={perfil} alt="perfil" className="p-1" />
+                  <img src={perfil} alt="perfil"/>
                </div>
             </div>
 
