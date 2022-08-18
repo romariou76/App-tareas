@@ -9,11 +9,11 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
         <input
           type="checkbox"
           checked={completada} // le pasamos el valor boleano de completada
-          onClick={() => completarTarea(id)}
+          onChange={() => completarTarea(id)}
           className="checkbox checkbox-primary"
         />
 
-        <p className="text-black3 font-bold">{texto}</p>
+        <p className="text-white font-bold">{texto}</p>
       </div>
       <div className="flex justify-end mr-9">
         <button onClick={() => eliminarTarea(id)}>

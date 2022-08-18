@@ -1,5 +1,6 @@
 .tarea-contenedor.completada {
     text-decoration: line-through;
+    color: black;
   }
 
 .tarea-contenedor{
@@ -12,7 +13,7 @@
 .tarea-icono{
     width: 25px;
     height: 25px;
-    color: rgb(61, 60, 60);
+    color: rgb(158, 0, 0);
 }
 
 .checkbox{

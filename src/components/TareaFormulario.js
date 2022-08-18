@@ -20,19 +20,19 @@ function TareaFormulario(props) {
   };
 
   return (
-    <form onSubmit={manejarEnvio}>
+    <form onSubmit={manejarEnvio} className="bg-black">
       <div className="flex w-96 ml-4">
         <input
           type="text"
-          class="search__input"
+          className="search__input"
           placeholder="Ingrese una tarea"
-          minlength="4"
-          maxlength="33"
+          minLength="4"
+          maxLength="33"
           onChange={(e) => {
             setInput(e.target.value);
           }}
         />
-        <button class="search__button">
+        <button className="search__button">
           <IoAddCircle className="w-10 h-10 text-primary" />
         </button>
       </div>
