@@ -1,5 +1,5 @@
 import ListaDeTareas from "./ListaDeTareas";
-import Categorias from "./Categorias";
+// import Categorias from "./Categorias";
 import Navbar from "./Navbar";
 
 function Contenido() {
