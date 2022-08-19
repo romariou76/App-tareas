@@ -42,10 +42,10 @@ function Bienvenida(){
                             <input type="checkbox" checked="checked" className="checkbox checkbox-accent" />
                             <span className="label-text ml-2">Funcionamiento offline de la APP</span>
                         </div>
-                        <div className="flex justify start">
+                        {/* <div className="flex justify start">
                             <input type="checkbox" checked="checked" className="checkbox checkbox-accent" />
                             <span className="label-text ml-2">Opciones de personalización</span>
-                        </div>
+                        </div> */}
                     </div>
 
                 {/* <form> */}
@@ -55,7 +55,8 @@ function Bienvenida(){
                          placeholder="Ingrese su nombre" 
                          class="input w-full max-w-xs mb-4"
                          onChange={(e) => setUser(e.target.value)}/> */}
-                        <Link to="/app" className="btn btn-primary w-80">¡Empezar!</Link>
+                        <Link to="/" className="btn btn-primary w-80">¡Entendido!</Link>
+                         
                     </div>
                 {/* </form> */}
                 </div>
