@@ -5,6 +5,7 @@ import { FaThLarge } from "react-icons/fa";
 import { HiInformationCircle } from "react-icons/hi";
 import { IoMdSettings } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Drawer(){
     return(
@@ -24,7 +25,7 @@ function Drawer(){
          {/* Lista ul que es caja de los elementos */}
          <ul className="menu p-12 overflow-y-auto w-80 bg-purple text-base-content space-y-2">
             {/* Imagen avatar */}
-            <div className="avatar my-10 ml-0">
+            <div className="avatar my-8 ml-0">
                <div className="w-32 rounded-full">
                   <img src={perfil} alt="perfil" className="p-1" />
                </div>
@@ -68,10 +69,11 @@ function Drawer(){
             </li>
             
             <li>
-               <a href="#a" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white2 hover:bg-gray-100 dark:hover:bg-gray-700 mb-14">
-                  <HiInformationCircle className="w-5 h-5"/>
-                  <label htmlFor="my-modal" className="ml-2 text-white">About</label>
-               </a>
+            <Link to="/about" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white2 hover:bg-gray-100 dark:hover:bg-gray-700 mb-14">
+               <HiInformationCircle className="w-5 h-5"/>
+               <label htmlFor="my-modal" className="ml-2 text-white">About</label>
+            </Link>
+
             </li>
 
             <p className="text-sm font-bold">Desarrollado por</p>

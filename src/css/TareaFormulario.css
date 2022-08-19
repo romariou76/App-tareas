@@ -43,3 +43,9 @@
     width: 1.3em;
     fill: #b4b4b4;
   }
+
+  .asa{
+    background-color: rgb(109 40 217);
+    color: white;
+    border-radius: 50px;
+  }
