@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../css/TareaFormulario.css'
-import { IoAddCircle } from "react-icons/io5";
+import { IoIosAdd } from "react-icons/io";
 import { v4 as uuidv4 } from "uuid";
 
 function TareaFormulario(props) {
@@ -33,7 +33,7 @@ function TareaFormulario(props) {
           }}
         />
         <button className="search__button">
-          <IoAddCircle className="w-10 h-10 text-primary" />
+          <IoIosAdd className="w-8 h-8 ml-2 text-primary asa" />
         </button>
       </div>
     </form>

@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Bienvenida />} />
-        <Route path="/app" element={<Drawer />} />
+        <Route path="/about" element={<Bienvenida />} />
+        <Route path="/" element={<Drawer />} />
         
         {/* <Route path="/bienvenida" render={() => {
           return user ? <Navigate to='/' />: <Bienvenida />

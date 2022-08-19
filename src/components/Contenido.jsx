@@ -12,7 +12,7 @@ function Contenido() {
             <div className="h-auto bg-black mb-5">
               <div className="grid justify-items-start">
                 <h1 className="text-white text-4xl font-bold mb-6 ml-4">
-                  Bienvenido
+                  ¡Planifica tu día!
                 </h1>
                 {/* <p className="ml-4 mb-5 text-lg text-black2 font-bold">Categorias</p> */}
               </div>
