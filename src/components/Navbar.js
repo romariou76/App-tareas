@@ -11,7 +11,7 @@ function Navbar() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            className="inline-block w-6 h-6 stroke-current"
+            className="inline-block w-6 h-6 stroke-current text-black"
           >
             <path
               strokeLinecap="round"
@@ -24,12 +24,11 @@ function Navbar() {
       </div>
 
       <div className="navbar-center">
-        <a
-          className="btn btn-ghost normal-case text-xl text-transparent"
-          href="#a"
+        <p
+          className="text-xl text-transparent"
         >
           ThingsTodobyRom
-        </a>
+        </p>
       </div>
 
       <div className="navbar-end">

@@ -37,13 +37,12 @@ function Drawer(){
             </div>
             {/* boton close */}
             <div className="flex items-start justify-end lg:hidden bg-transparent">
-               <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+               <button type="button" className=" text-sm absolute top-6 right-2.5 inline-flex items-center" >
                   <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
-                    <IoCloseOutline className="w-7 h-7 mt-6 text-white"/>
+                    <IoCloseOutline className="w-7 h-7 mt-0 text-white"/>
                   </label>
                </button>
             </div>
-
 
             <li>
                <a href="#a" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white2 hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -71,7 +70,7 @@ function Drawer(){
             <li>
             <Link to="/about" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white2 hover:bg-gray-100 dark:hover:bg-gray-700 mb-14">
                <HiInformationCircle className="w-5 h-5"/>
-               <label htmlFor="my-modal" className="ml-2 text-white">About</label>
+               <label htmlFor="my-modal" className="ml-2 text-white">Acerca de</label>
             </Link>
 
             </li>
