@@ -71,7 +71,7 @@ function Drawer(){
             <li>
                <Link to="/about" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white2 hover:bg-gray-100 dark:hover:bg-gray-700 mb-14">
                   <HiInformationCircle className="w-5 h-5"/>
-                  <label htmlFor="my-modal" className="ml-2 text-white">About</label>
+                  <label htmlFor="my-modal" className="ml-2 text-white">Acerca de</label>
                </Link>
             </li>
 
