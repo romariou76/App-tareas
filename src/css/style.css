@@ -1,8 +1,9 @@
 .bienvenida{
-    background-image: url("fondo1.jpg");
+    /* background-image: url("fondo1.jpg"); */
     height: 100vh;
-   background-repeat : no-repeat;
-   background-size : cover;
+    background-color: rgb(8, 8, 26);
+   /* background-repeat : no-repeat; */
+   /* background-size : cover; */
    animation: fadeIn 2s ease;
 }
 

@@ -24,12 +24,7 @@ function Navbar() {
       </div>
 
       <div className="navbar-center">
-        <a
-          className="btn btn-ghost normal-case text-xl text-transparent"
-          href="#a"
-        >
-          ThingsTodobyRom
-        </a>
+        <p className="text-xl text-transparent">ThingsTodobyRom</p>
       </div>
 
       <div className="navbar-end">
